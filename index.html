@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, 50px);
+      }
+
+      #red {
+        background-color: red;
+      }
+
+      #green {
+        background-color: green;
+      }
+
+      #blue {
+        background-color: blue;
+      }
+
+      #yellow {
+        background-color: yellow;
+      }
+
+      #purple {
+        background-color: purple;
+      }
+
+      #grey {
+        background-color: grey;
+      }
+
+      @media screen and (max-width: 960px) and (min-width: 600px) {
+        .container {
+          grid-template-columns: repeat(2, auto);
+          grid-template-rows: repeat(3, 50px);
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .container {
+          grid-template-columns: auto;
+          grid-template-rows: repeat(6, 50px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="content" id="red"></div>
+      <div class="content" id="green"></div>
+      <div class="content" id="blue"></div>
+      <div class="content" id="yellow"></div>
+      <div class="content" id="purple"></div>
+      <div class="content" id="grey"></div>
+    </div>
+  </body>
+</html>
